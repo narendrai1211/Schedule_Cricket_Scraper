@@ -53,7 +53,7 @@ class ScheduleBanSpider(scrapy.Spider):
                 print(e)
         list_header = ['date', 'series_name', 'series_match_type', 'match', 'venue']
 
-        with open('schedule_wi.csv', 'w') as file:
+        with open('schedule_ban.csv', 'w') as file:
             csv_writer = csv.writer(file, quoting=csv.QUOTE_MINIMAL, escapechar=' ')
             csv_writer.writerow(list_header)
             csv_writer.writerows(self.main_list)
